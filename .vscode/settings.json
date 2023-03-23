@@ -21,7 +21,10 @@
       "**/CVS": true
    },
    "files.autoSave": "off",
-   "workbench.colorTheme": "Monokai",
+   "workbench.colorTheme": "Default Dark+ Experimental",
    "terminal.integrated.gpuAcceleration": "canvas",
-   "editor.defaultFormatter": "HookyQR.beautify"
+   "editor.defaultFormatter": "HookyQR.beautify",
+   "[python]": {
+      "editor.defaultFormatter": "ms-python.python"
+   }
 }
