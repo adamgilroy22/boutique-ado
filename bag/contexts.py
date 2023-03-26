@@ -5,6 +5,7 @@ from products.models import Product
 
 
 def bag_contents(request):
+
     bag_items = []
     total = 0
     product_count = 0
@@ -21,6 +22,7 @@ def bag_contents(request):
                 'product': product,
             })
         else:
+            product = get_object_or_404(Product, pk=item_id)
             for size, quantity in item_data['items_by_size'].items():
                 total += quantity * product.price
                 product_count += quantity
@@ -49,4 +51,5 @@ def bag_contents(request):
         'free_delivery_threshold': settings.FREE_DELIVERY_THRESHOLD,
         'grand_total': grand_total,
     }
+
     return context
